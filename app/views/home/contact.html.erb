@@ -1,0 +1,37 @@
+<div class="container">
+	<h1 class="about">Contactez-nous</h1>
+	<hr>
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="row">
+				<div class="col-lg-6">
+					<%= image_tag "telstra", class: "appelseraph"%>
+				</div>
+				<div class="col-lg-6">
+					<%= image_tag "adid", class: "appelseraph"%>
+				</div>
+			</div>
+			 
+			<div class="card-body">
+				<h4 class="card-title">Nih-mercato@contact.nih</h4>
+				<h6 class="category text-gray">Co-fondateur de Nih Corporation</h6>
+				<p class="card-description">Votre demande sera acceptée pas plus d'une heure</p>
+			</div>
+		</div>
+	
+		<div class="col-lg-6 ccclll" <>
+			<%= form_tag '/mail_nalefa', method: 'POST' , class: "form-group contact-form" do%>
+				<%= label_tag "Votre nom"%>
+				<%= text_field_tag "name",'', class: "form-control"%><br>
+				<%= label_tag "Votre email"%>
+				<%= text_field_tag "pays",'', class: "form-control"%><br>
+				<%= label_tag "Votre pays"%>
+				<%= text_field_tag "email",'', class: "form-control"%><br>
+				<%= label_tag "Votre message"%>
+				<%= text_area_tag "request",'', class: "form-control"%><br>
+				<%= submit_tag "Envoyer", class: "btn btn-success"%>	
+			<% end %>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Football.nih</title>
+    <link rel="shortcut icon" type="images/png" href="icon.png"/>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
+    <div class="float-right"> <%= image_tag "myAvatar.png", class: "Blam" %> <span class="Loko">Séraphin</span></div>
+    <div class="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">FootballNih</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+  </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/">Actualités <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="<%= home_joueurs_path%>">Joueurs</a>
+            <a class="nav-item nav-link" href="<%= home_marque_path%>">Equipe</a>
+            <a class="nav-item nav-link" href="<%=mercato_estivale_path%>">Estivale</a>
+            <a class="nav-item nav-link" class="btn btn-success" href="<%=home_contact_path%>">Connexion</a>
+        </div>
+        <!-- <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+        </div> -->
+      </div>
+    </nav>
+  </div>
+    <%= yield %>
+
+   
+  </body>
+</html>
